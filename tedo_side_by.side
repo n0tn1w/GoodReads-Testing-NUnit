@@ -186,73 +186,83 @@
       "value": ""
     }]
   }, {
-    "id": "e82ee508-74ef-47f8-a845-b1b6d38d7fec",
-    "name": "TestSearchBar",
+    "id": "11a97926-2a63-4a12-bd05-0a91d569caec",
+    "name": "TestReviewHintWindow",
     "commands": [{
-      "id": "99d31162-f570-41b7-bcd7-7d4670e662dd",
+      "id": "8ff181e1-0d6e-43e7-93ea-33dffed04c9a",
       "comment": "",
       "command": "open",
       "target": "/",
       "targets": [],
       "value": ""
     }, {
-      "id": "e092fd9b-f601-4ad8-8c53-d58133a6c243",
+      "id": "455c1bda-9c5e-44ef-8926-d59d21604e5b",
       "comment": "",
       "command": "setWindowSize",
-      "target": "1523x911",
+      "target": "1282x764",
       "targets": [],
       "value": ""
     }, {
-      "id": "359e8b5a-2e7a-4845-b333-365c494ec8b5",
+      "id": "06f37adc-eff4-4201-b241-37d072ea13dd",
       "comment": "",
       "command": "click",
-      "target": "name=q",
+      "target": "linkText=My Books",
       "targets": [
-        ["name=q", "name"],
-        ["css=.searchBox__input", "css:finder"],
-        ["xpath=//input[@name='q']", "xpath:attributes"],
-        ["xpath=//div[@id='bodycontainer']/div/div[2]/div/header/div[2]/div/div[2]/form/input", "xpath:idRelative"],
-        ["xpath=//input", "xpath:position"]
+        ["linkText=My Books", "linkText"],
+        ["css=.siteHeader__primaryNavInline .siteHeader__topLevelItem:nth-child(2) > .siteHeader__topLevelLink", "css:finder"],
+        ["xpath=//a[contains(text(),'My Books')]", "xpath:link"],
+        ["xpath=//div[@id='bodycontainer']/div/div[2]/div/header/div[2]/div/nav/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/review/list/171059934?ref=nav_mybooks')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'My Books')]", "xpath:innerText"]
       ],
       "value": ""
     }, {
-      "id": "20bdd92c-558a-431a-9514-5782d8bac09a",
+      "id": "76c403c2-1ba6-4037-b4df-72c4da284b62",
       "comment": "",
-      "command": "type",
-      "target": "name=q",
+      "command": "click",
+      "target": "linkText=Write a review",
       "targets": [
-        ["name=q", "name"],
-        ["css=.searchBox__input", "css:finder"],
-        ["xpath=//input[@name='q']", "xpath:attributes"],
-        ["xpath=//div[@id='bodycontainer']/div/div[2]/div/header/div[2]/div/div[2]/form/input", "xpath:idRelative"],
-        ["xpath=//input", "xpath:position"]
+        ["linkText=Write a review", "linkText"],
+        ["css=#review_6156933276 > .review a", "css:finder"],
+        ["xpath=//a[contains(text(),'Write a review')]", "xpath:link"],
+        ["xpath=//tr[@id='review_6156933276']/td[16]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/review/edit/523999?report_event=true')]", "xpath:href"],
+        ["xpath=//td[16]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Write a review')]", "xpath:innerText"]
       ],
-      "value": "tom"
+      "value": ""
     }, {
-      "id": "ad020c20-de33-4e3f-a838-7640bcaf143a",
+      "id": "4e42aaa2-b6f4-4026-9d7d-58578a0c682b",
       "comment": "",
-      "command": "sendKeys",
-      "target": "name=q",
+      "command": "click",
+      "target": "linkText=Formatting tips",
       "targets": [
-        ["name=q", "name"],
-        ["css=.searchBox__input", "css:finder"],
-        ["xpath=//input[@name='q']", "xpath:attributes"],
-        ["xpath=//div[@id='bodycontainer']/div/div[2]/div/header/div[2]/div/div[2]/form/input", "xpath:idRelative"],
-        ["xpath=//input", "xpath:position"]
+        ["linkText=Formatting tips", "linkText"],
+        ["css=.last:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Formatting tips')]", "xpath:link"],
+        ["xpath=//a[@onclick=\"$(this).summon('formatting_tips_review_6156933276');return false;\"]", "xpath:attributes"],
+        ["xpath=//form[@id='form_review_6156933276']/div/div[5]/div/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[11]", "xpath:href"],
+        ["xpath=//div[5]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Formatting tips')]", "xpath:innerText"]
       ],
-      "value": "${KEY_ENTER}"
+      "value": ""
     }, {
-      "id": "a64c1bb1-5e7f-4f93-913a-9f2514f66fb8",
+      "id": "b42c3c4d-073f-4f94-8b6f-fee6388486e7",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "moreOptionsLink",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eb529aff-53bc-4ba1-b414-44dcda895e75",
       "comment": "",
       "command": "close",
       "target": "",
       "targets": [],
       "value": ""
     }]
-  }, {
-    "id": "59494f26-52d9-4aa8-8fb2-c5d49d9db3e3",
-    "name": "SearchBarTest",
-    "commands": []
   }],
   "suites": [{
     "id": "fb051cf5-f3c8-4b4e-914c-7e0c41775e9b",
