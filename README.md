@@ -1,5 +1,24 @@
 # Quality-Assurance
 
+## 0 Technology of choice and project set up
+
+NUnit stands as a venerable and widely embraced open-source unit testing framework, serving as an indispensable tool within the .NET development ecosystem. Its inception dates back to the early 2000s, emerging as a response to the need for a robust and flexible testing framework for the .NET platform. Over the years, NUnit has evolved into a sophisticated testing solution, providing developers with a suite of powerful features and conventions that streamline the process of creating and executing tests for .NET applications.
+
+### History
+The roots of NUnit trace back to the pioneering work of Charlie Poole, who initiated the project in 2002. Inspired by the popular Java testing framework JUnit, NUnit was conceived with the vision of offering a similar testing experience for .NET developers. Poole's creation quickly gained traction within the .NET community, addressing a critical gap in the testing landscape.
+
+### Core Concepts and Features
+At its core, NUnit revolves around the fundamental concepts of test fixtures, test cases, and assertions. A test fixture is a container for a series of test cases, each representing a distinct unit of functionality to be tested. NUnit employs attributes, such as [TestFixture] and [Test], to delineate these fixtures and cases, providing an intuitive and expressive syntax for developers.
+
+One of NUnit's standout features is its support for parameterized tests. This capability allows developers to write a single test method that accepts different inputs, enabling concise and reusable test logic. The [TestCase] attribute empowers developers to provide multiple sets of inputs and expected outputs, promoting efficient and comprehensive test coverage.
+
+Test fixtures in NUnit can leverage setup and teardown methods, marked with [SetUp] and [TearDown] attributes, respectively. These methods facilitate the initialization and cleanup processes required for each test case, fostering a modular and organized testing environment.
+
+### Assertions: The Backbone of NUnit
+NUnit provides a diverse set of assertion methods through the Assert class, offering developers a spectrum of options to validate expected outcomes. Whether checking for equality, inequality, or handling exceptions, NUnit's assertion library caters to a wide range of scenarios, ensuring that developers can articulate their test expectations with precision.
+
+### Extensibility and Integration
+NUnit's extensibility is a hallmark of its success. The framework embraces the concept of custom extensions and attributes, enabling developers to tailor their testing experience to specific project requirements. Integration with popular development environments, continuous integration tools, and build systems is seamless, further solidifying NUnit's status as an integral part of the .NET testing ecosyste
 
 ## 1 Test sign in
 
