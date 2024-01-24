@@ -20,6 +20,12 @@ NUnit provides a diverse set of assertion methods through the Assert class, offe
 ### Extensibility and Integration
 NUnit's extensibility is a hallmark of its success. The framework embraces the concept of custom extensions and attributes, enabling developers to tailor their testing experience to specific project requirements. Integration with popular development environments, continuous integration tools, and build systems is seamless, further solidifying NUnit's status as an integral part of the .NET testing ecosyste
 
+### Project set up
+For project execution you need at least .NET 6. You need to create a Privates.cs file with the following consts: 
+    public const string LoginEmail = "";
+    public const string LoginPassword = "";
+This is need so that you could do the test which requires an account that is loged in.
+
 ## 1 Test sign in
 
 ### 1.1 Test type
@@ -59,9 +65,9 @@ Total number of bugs found: 0
 
 | **Test Case ID**  | TestSignUpWorking | |
 |---|---|---|
-| **Description**   | Tests SignUp with correct credentials. | |
-| **Applicable for**| Firefox | |
-| **Initial Conditions** | None | |
+| **Description**   | Tests SignUp with correct credentials. |
+| **Applicable for**| Firefox |
+| **Initial Conditions** | None |
 | **Test Step ID**  | **Test Step Description** | **Expected Result**  |
 | 1 | Open the site's home page. | The home page is loaded. |
 | 2 | Click SignUp with email. | Redirected so SignUp page. |
@@ -70,7 +76,7 @@ Total number of bugs found: 0
 | 5 | Write secure Password in the Password input box. | An Password is entered. | 
 | 6 | Write same Password in the Confirm Password input box. | An Confirmed Password is entered. | 
 | 7 | Click create an account. | Account is created and redirected to home page. | 
-| **Test verdict** | Passed | |
+| **Test verdict** | Passed |
 
 
 ### 1.5.2 Test SignUp with empty strings
