@@ -44,7 +44,7 @@ The world's largest site for readers and book recommendations
 
 ### 1.3 Test Personnel
 
-Name: _________ Date: 10.01.2024  
+Name: Daniel Manchevski Date: 10.01.2024  
 
 
 ## 1.4 Test Summary
@@ -77,8 +77,8 @@ Total number of bugs found: 0
 | 6 | Write same Password in the Confirm Password input box. | An Confirmed Password is entered. | 
 | 7 | Click create an account. | Account is created and redirected to home page. | 
 | **Test verdict** | Passed |  
-
-
+  
+  
 ### 1.5.2 Test SignUp with empty strings
 
 #### Special Instructions
@@ -98,8 +98,8 @@ Total number of bugs found: 0
 | 6 | Write an empty string in the Confirm Password input box. | An Confirmed Password is entered. | 
 | 7 | Click create an account. | An error div pops up. | 
 | **Test verdict** | Passed |  
-
-
+  
+  
 ### 1.5.3 Test SignUp with empty strings
 
 #### Special Instructions
@@ -119,8 +119,8 @@ Total number of bugs found: 0
 | 6 | Write same Password in the Confirm Password input box. | An Confirmed Password is entered. | 
 | 7 | Click create an account. | Account is created and redirected to home page. | 
 | **Test verdict** | Passed |  
-
-
+  
+  
 ### 1.5.4 Test SignUp with different password and confirmation password
 
 #### Special Instructions
@@ -140,8 +140,8 @@ Total number of bugs found: 0
 | 6 | Write a different Password in the Confirm Password input box. | An Confirmed Password is entered. | 
 | 7 | Click create an account. | Account is created and redirected to home page. | 
 | **Test verdict** | Passed |  
-
-
+  
+  
 ### 1.5.5 Test LogIn with correct credentials
 
 #### Special Instructions
@@ -160,8 +160,8 @@ Total number of bugs found: 0
 | 5 | Write Password in the Password input box. | An Password is entered. | 
 | 6 | Click create an account. | Redirected to home page. | 
 | **Test verdict** | Passed |  
-
-
+  
+  
 ### 1.5.6 Test LogIn with incorect email
 
 #### Special Instructions
@@ -180,8 +180,8 @@ Total number of bugs found: 0
 | 5 | Write Password in the Password input box. | An Password is entered. | 
 | 6 | Click create an account. |  An error div pops up. | 
 | **Test verdict** | Passed |  
-
-
+  
+  
 ### 1.5.7 Test LogIn with incorect password
 
 #### Special Instructions
@@ -200,8 +200,8 @@ Total number of bugs found: 0
 | 5 | Write uncorect Password in the Password input box. | An Password is entered. | 
 | 6 | Click create an account. |  An error div pops up. | 
 | **Test verdict** | Passed |  
-
-
+  
+  
 ## 2 Test book show page
 
 ### 2.1 Test type
@@ -220,7 +220,7 @@ The world's largest site for readers and book recommendations
 
 ### 2.3 Test Personnel
 
-Name: _________ Date: 10.01.2024  
+Name: Teodor Kostadinov Date: 10.01.2024  
 
 
 ## 2.4 Test Summary
@@ -251,7 +251,7 @@ Total number of bugs found: 0
 | 4 | Click on the most popular book. | Redirect to this book's page. |
 | 5 | Comapre saved url to the currect url. | They should be the same. |
 | **Test verdict** | Passed |  
-
+  
 
 ### 2.5.2 Test rating a book 5 stars
 
@@ -269,7 +269,7 @@ Total number of bugs found: 0
 | 3 | Click on the most popular book. | Redirect to this book's page. |
 | 4 | Click on the fifth star. | Tostr popup with text "5 star rating saved" and book is rated 5 stars. |
 | **Test verdict** | Passed |  
-
+  
 
 ### 2.5.3 Test rating a book 1 stars
 
@@ -287,7 +287,7 @@ Total number of bugs found: 0
 | 3 | Click on the most popular book. | Redirect to this book's page. |
 | 4 | Click on the first star. | Tostr popup with text "1 star rating saved" and book is rated 1 stars. |
 | **Test verdict** | Passed |  
-
+  
 
 ### 2.5.4 Test remove rating
 
@@ -305,7 +305,7 @@ Total number of bugs found: 0
 | 3 | Click on the most popular book. | Redirect to this book's page. | 
 | 4 | Click on the remove rating. | Tostr popup with text "Rating removed" and book's rating will be reset. |
 | **Test verdict** | Passed |  
-
+  
 
 ### 2.5.5 Test adding book to wanted list
 
@@ -325,7 +325,7 @@ Total number of bugs found: 0
 | 5 | Go to home page. | |
 | 6 | Go to Want to Read | Wanted book apears as the first option inside of it. |
 | **Test verdict** | Passed |  
-
+  
 
 ### 2.5.6 Test removing book to wanted list
 
@@ -347,7 +347,7 @@ Total number of bugs found: 0
 | 7 | Go to home page. | | 
 | 8 | Go to Want to Read | Removed book doesnt appear in any of the books. |
 | **Test verdict** | Passed |  
-
+  
 
 ## 3 Test News and Interviews
 
@@ -367,7 +367,7 @@ The world's largest site for readers and book recommendations
 
 ### 3.3 Test Personnel
 
-Name: _________ Date: 10.01.2024  
+Name: Daniel Manchevski Date: 10.01.2024  
 
 
 ## 3.4 Test Summary
@@ -397,7 +397,7 @@ Total number of bugs found: 4
 | 3 | Click on the first blog | The blog show load. |
 | 4 | Test blog url. | The blog url should be the same as the first News and Interview page. |
 | **Test verdict** | Passed |  
-
+  
 
 ### 3.5.2 Test posting a comment under a blog
 
@@ -417,7 +417,7 @@ Total number of bugs found: 4
 | 5 | Click on post button. | |
 | 6 | No error should come up and the comments is posted. | An error comes up. |
 | **Test verdict** | Failed |  
-
+  
 
 ### 3.5.3 Test the view of the html helper button
 
@@ -436,8 +436,8 @@ Total number of bugs found: 4
 | 4 | Click on the (some html is okei) button. | A modal pops up. |
 | 5 | Scroll up to look at the bottom of the modal. | The button disapears from the scree. |
 | **Test verdict** | Failed |  
-
-
+  
+  
 ### 3.5.3 Test the view of the add book/author button
 
 #### Special Instructions
@@ -455,7 +455,7 @@ Total number of bugs found: 4
 | 4 | Click on the (add book/author) button. | A modal pops up. |
 | 5 | Scroll up to look at the bottom of the modal. | The button disapears from the scree. |
 | **Test verdict** | Failed |  
-
+  
 
 ### 3.5.4 Test the add book/author modal text field
 
@@ -474,7 +474,7 @@ Total number of bugs found: 4
 | 4 | Click on the (add book/author) button. | A modal pops up. |
 | 5 | Add the letter 'a' 72 times. | The input field flows of the modal. |
 | **Test verdict** | Failed |  
-
+  
 
 ### 3.5.5 Test like button of the blog
 
@@ -495,7 +495,7 @@ Total number of bugs found: 4
 | 6 | Like the post. | The button turns to Unlike. | 
 | 7 | Comapre the old number of likes with the new number of likes | They should have a one difference. |
 | **Test verdict** | Passed |  
-
+  
 
 ### 3.5.6 Test unlike button of the blog
 
@@ -516,7 +516,7 @@ Total number of bugs found: 4
 | 6 | Unlike the post. | The button turns to Like. | 
 | 7 | Comapre the old number of likes with the new number of likes | They should have a one difference. |
 | **Test verdict** | Passed |  
-
+  
 
 
 ## 4 Test the Search Box
@@ -537,7 +537,7 @@ The world's largest site for readers and book recommendations
 
 ### 4.3 Test Personnel
 
-Name: _________ Date: 10.01.2024  
+Name: Teodor Konstadinov Date: 10.01.2024  
 
 
 ## 4.4 Test Summary
@@ -568,7 +568,7 @@ Total number of bugs found: 0
 | 3 | Press the search option. | The page is redirected. |
 | 4 | View first five promts of the search results. | Check if the they contain the string promt inside. |
 | **Test verdict** | Passed |  
-
+  
 
 ### 4.5.2 Test Search box with an empty string
 
@@ -586,7 +586,7 @@ Total number of bugs found: 0
 | 3 | Press the search option. | The page is redirected. |
 | 4 | View the search results. | No results show be showm. |
 | **Test verdict** | Passed |  
-
+  
 
 ### 4.5.3 Test Search box with an cyrillic promt
 
@@ -604,7 +604,7 @@ Total number of bugs found: 0
 | 3 | Press the search option. | The page is redirected. |
 | 4 | View first five promts of the search results. | Check if the they contain the cyrillic promt inside. |
 | **Test verdict** | Passed |  
-
+  
 
 ### 4.5.4 Test Search box by author
 
@@ -625,7 +625,7 @@ Total number of bugs found: 0
 | 6 | Search by author. | The page is redirected. | 
 | 7 | Get the first search results author. | Same author as the promt author. | 
 | **Test verdict** | Passed |  
-
+  
 
 ### 4.5.4 Test Search box by author by empty author
 
@@ -646,8 +646,7 @@ Total number of bugs found: 0
 | 6 | Search by empty author. | The page is redirected. | 
 | 7 | Get the results. | No results presant. |
 | **Test verdict** | Passed |  
-
-
+  
 
 ## 5 Test the Navigation
 
@@ -667,7 +666,7 @@ The world's largest site for readers and book recommendations
 
 ### 5.3 Test Personnel
 
-Name: _________ Date: 10.01.2024  
+Name: Daniel Manchevski Date: 10.01.2024  
 
 
 ## 5.4 Test Summary
@@ -699,7 +698,7 @@ Total number of bugs found: 0
 | 4 | Click on My Messages button in the nav bar. | Redirected to https://www.goodreads.com/message/inbox?ref=nav_my_messages. |
 | 5 | Click on My Friends button in the nav bar. | Redirected to https://www.goodreads.com/friend?ref=nav_my_friends. |
 | **Test verdict** | Passed |  
-
+  
 
 ## 6 Test Ask the Author
 
@@ -719,7 +718,7 @@ The world's largest site for readers and book recommendations
 
 ### 6.3 Test Personnel
 
-Name: _________ Date: 10.01.2024  
+Name: Teodor Kostadinov Date: 10.01.2024  
 
 
 ## 6.4 Test Summary
@@ -749,7 +748,7 @@ Total number of bugs found: 1
 | 3 | Select the first author. | Redirect to the author's page. | 
 | 4 | Check if the author page works | |
 | **Test verdict** | Passed |  
-
+  
 
 ### 6.5.2 Test if you could ask the author a question
 
@@ -768,7 +767,7 @@ Total number of bugs found: 1
 | 4 | Write a promt to ask. | The promt is displayed. |
 | 5 | Click the post button. | The author should be asked the promt. |
 | **Test verdict** | Passed |  
-
+  
 
 ### 6.5.3 Test if you could ask the author a question fromt his page
 
@@ -787,7 +786,7 @@ Total number of bugs found: 1
 | 4 | Write a promt to ask. | The promt is displayed. |
 | 5 | Click the post button. | The author should be asked the promt. |
 | **Test verdict** | Passed |  
-
+  
 
 ### 6.5.4 Test author's video playing
 
@@ -806,14 +805,3 @@ Total number of bugs found: 1
 | 4 | Select the first video. | Redirect should happen. |
 | 5 | Video is playing. | An error div occurs. |
 | **Test verdict** | Failed |  
-
-
-## Traceability matrix
-
-| Test Case ID | Bug Description  | Note  |
-|---|---|---|
-| TC_FUNCT_01  | The bug was found in the page login.aspx  |  |
-| bug2 |  |  |
-| bug3 |  |  |
-| bug4 |  |  |
-| bug5 |  |  |
