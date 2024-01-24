@@ -1,0 +1,1984 @@
+<h1 id="quality-assurance">Quality-Assurance</h1>
+<h2 id="0-technology-of-choice-and-project-set-up">0 Technology of choice and project set up</h2>
+<p>NUnit stands as a venerable and widely embraced open-source unit testing framework, serving as an indispensable tool within the .NET development ecosystem. Its inception dates back to the early 2000s, emerging as a response to the need for a robust and flexible testing framework for the .NET platform. Over the years, NUnit has evolved into a sophisticated testing solution, providing developers with a suite of powerful features and conventions that streamline the process of creating and executing tests for .NET applications.</p>
+<h3 id="history">History</h3>
+<p>The roots of NUnit trace back to the pioneering work of Charlie Poole, who initiated the project in 2002. Inspired by the popular Java testing framework JUnit, NUnit was conceived with the vision of offering a similar testing experience for .NET developers. Poole&#39;s creation quickly gained traction within the .NET community, addressing a critical gap in the testing landscape.</p>
+<h3 id="core-concepts-and-features">Core Concepts and Features</h3>
+<p>At its core, NUnit revolves around the fundamental concepts of test fixtures, test cases, and assertions. A test fixture is a container for a series of test cases, each representing a distinct unit of functionality to be tested. NUnit employs attributes, such as [TestFixture] and [Test], to delineate these fixtures and cases, providing an intuitive and expressive syntax for developers.</p>
+<p>One of NUnit&#39;s standout features is its support for parameterized tests. This capability allows developers to write a single test method that accepts different inputs, enabling concise and reusable test logic. The [TestCase] attribute empowers developers to provide multiple sets of inputs and expected outputs, promoting efficient and comprehensive test coverage.</p>
+<p>Test fixtures in NUnit can leverage setup and teardown methods, marked with [SetUp] and [TearDown] attributes, respectively. These methods facilitate the initialization and cleanup processes required for each test case, fostering a modular and organized testing environment.</p>
+<h3 id="assertions-the-backbone-of-nunit">Assertions: The Backbone of NUnit</h3>
+<p>NUnit provides a diverse set of assertion methods through the Assert class, offering developers a spectrum of options to validate expected outcomes. Whether checking for equality, inequality, or handling exceptions, NUnit&#39;s assertion library caters to a wide range of scenarios, ensuring that developers can articulate their test expectations with precision.</p>
+<h3 id="extensibility-and-integration">Extensibility and Integration</h3>
+<p>NUnit&#39;s extensibility is a hallmark of its success. The framework embraces the concept of custom extensions and attributes, enabling developers to tailor their testing experience to specific project requirements. Integration with popular development environments, continuous integration tools, and build systems is seamless, further solidifying NUnit&#39;s status as an integral part of the .NET testing ecosyste</p>
+<h3 id="project-set-up">Project set up</h3>
+<p>For project execution you need at least .NET 6. You need to create a Privates.cs file with the following consts:<br>&emsp;public const string LoginEmail = &quot;&quot;;<br>&emsp;public const string LoginPassword = &quot;&quot;;<br>This is need so that you could do the test which requires an account that is loged in.</p>
+<h2 id="1-test-sign-in">1 Test sign in</h2>
+<h3 id="1-1-test-type">1.1 Test type</h3>
+<p>Functional Test: <em>Yes</em>  </p>
+<h3 id="1-2-system-under-test">1.2 System Under Test</h3>
+<p>System name: <a href="https://www.goodreads.com">https://www.goodreads.com</a>
+Version: 10.01.2024</p>
+<p>Short description of the system:
+The world&#39;s largest site for readers and book recommendations</p>
+<h3 id="1-3-test-personnel">1.3 Test Personnel</h3>
+<p>Name: Daniel Manchevski Date: 10.01.2024  </p>
+<h2 id="1-4-test-summary">1.4 Test Summary</h2>
+<h3 id="results">Results</h3>
+<p>Total number of test cases: 7<br>Total number of test cases passed: 7<br>Total number of test cases failed: 0<br>Total number of bugs found: 0</p>
+<h2 id="1-5-test-cases">1.5 Test Cases</h2>
+<h3 id="1-5-1-test-signup-with-correct-credentials">1.5.1 Test SignUp with correct credentials</h3>
+<h4 id="special-instructions">Special Instructions</h4>
+<p><em>NONE</em></p>
+<table>
+<thead>
+<tr>
+<th><strong>Test Case ID</strong></th>
+<th>TestSignUpWorking</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Description</strong></td>
+<td>Tests SignUp with correct credentials.</td>
+</tr>
+<tr>
+<td><strong>Applicable for</strong></td>
+<td>Firefox</td>
+</tr>
+<tr>
+<td><strong>Initial Conditions</strong></td>
+<td>None</td>
+</tr>
+<tr>
+<td><strong>Test Step ID</strong></td>
+<td><strong>Test Step Description</strong></td>
+<td><strong>Expected Result</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Open the site&#39;s home page.</td>
+<td>The home page is loaded.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Click SignUp with email.</td>
+<td>Redirected so SignUp page.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Write Username in the Your name input box.</td>
+<td>An Username is entered.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Write unique Email in the Email input box.</td>
+<td>An Email is entered.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Write secure Password in the Password input box.</td>
+<td>An Password is entered.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Write same Password in the Confirm Password input box.</td>
+<td>An Confirmed Password is entered.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Click create an account.</td>
+<td>Account is created and redirected to home page.</td>
+</tr>
+<tr>
+<td><strong>Test verdict</strong></td>
+<td>Passed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1-5-2-test-signup-with-empty-strings">1.5.2 Test SignUp with empty strings</h3>
+<h4 id="special-instructions">Special Instructions</h4>
+<p><em>NONE</em></p>
+<table>
+<thead>
+<tr>
+<th><strong>Test Case ID</strong></th>
+<th>TestSignUpEmptyFields</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Description</strong></td>
+<td>Tests SignUp with empty credentials.</td>
+</tr>
+<tr>
+<td><strong>Applicable for</strong></td>
+<td>Firefox</td>
+</tr>
+<tr>
+<td><strong>Initial Conditions</strong></td>
+<td>None</td>
+</tr>
+<tr>
+<td><strong>Test Step ID</strong></td>
+<td><strong>Test Step Description</strong></td>
+<td><strong>Expected Result</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Open the site&#39;s home page.</td>
+<td>The home page is loaded.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Click SignUp with email.</td>
+<td>Redirected so SignUp page.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Write an empty string in the Your name input box.</td>
+<td>An Username is entered.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Write an empty string in the Email input box.</td>
+<td>An Email is entered.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Write an empty string in the Password input box.</td>
+<td>An Password is entered.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Write an empty string in the Confirm Password input box.</td>
+<td>An Confirmed Password is entered.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Click create an account.</td>
+<td>An error div pops up.</td>
+</tr>
+<tr>
+<td><strong>Test verdict</strong></td>
+<td>Passed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1-5-3-test-signup-with-empty-strings">1.5.3 Test SignUp with empty strings</h3>
+<h4 id="special-instructions">Special Instructions</h4>
+<p><em>NONE</em></p>
+<table>
+<thead>
+<tr>
+<th><strong>Test Case ID</strong></th>
+<th>TestSignUpAlreadyUsedEmail</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Description</strong></td>
+<td>Tests SignUp with used email.</td>
+</tr>
+<tr>
+<td><strong>Applicable for</strong></td>
+<td>Firefox</td>
+</tr>
+<tr>
+<td><strong>Initial Conditions</strong></td>
+<td>None</td>
+</tr>
+<tr>
+<td><strong>Test Step ID</strong></td>
+<td><strong>Test Step Description</strong></td>
+<td><strong>Expected Result</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Open the site&#39;s home page.</td>
+<td>The home page is loaded.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Click SignUp with email.</td>
+<td>Redirected so SignUp page.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Write Username in the Your name input box.</td>
+<td>An Username is entered.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Write an already used Email in the Email input box.</td>
+<td>An Email is entered.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Write secure Password in the Password input box.</td>
+<td>An Password is entered.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Write same Password in the Confirm Password input box.</td>
+<td>An Confirmed Password is entered.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Click create an account.</td>
+<td>Account is created and redirected to home page.</td>
+</tr>
+<tr>
+<td><strong>Test verdict</strong></td>
+<td>Passed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1-5-4-test-signup-with-different-password-and-confirmation-password">1.5.4 Test SignUp with different password and confirmation password</h3>
+<h4 id="special-instructions">Special Instructions</h4>
+<p><em>NONE</em></p>
+<table>
+<thead>
+<tr>
+<th><strong>Test Case ID</strong></th>
+<th>TestSignUpWorking</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Description</strong></td>
+<td>Tests SignUp with different password and confirmation password.</td>
+</tr>
+<tr>
+<td><strong>Applicable for</strong></td>
+<td>Firefox</td>
+</tr>
+<tr>
+<td><strong>Initial Conditions</strong></td>
+<td>None</td>
+</tr>
+<tr>
+<td><strong>Test Step ID</strong></td>
+<td><strong>Test Step Description</strong></td>
+<td><strong>Expected Result</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Open the site&#39;s home page.</td>
+<td>The home page is loaded.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Click SignUp with email.</td>
+<td>Redirected so SignUp page.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Write Username in the Your name input box.</td>
+<td>An Username is entered.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Write unique Email in the Email input box.</td>
+<td>An Email is entered.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Write secure Password in the Password input box.</td>
+<td>An Password is entered.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Write a different Password in the Confirm Password input box.</td>
+<td>An Confirmed Password is entered.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Click create an account.</td>
+<td>Account is created and redirected to home page.</td>
+</tr>
+<tr>
+<td><strong>Test verdict</strong></td>
+<td>Passed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1-5-5-test-login-with-correct-credentials">1.5.5 Test LogIn with correct credentials</h3>
+<h4 id="special-instructions">Special Instructions</h4>
+<p><em>NONE</em></p>
+<table>
+<thead>
+<tr>
+<th><strong>Test Case ID</strong></th>
+<th>TestLoginWorking</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Description</strong></td>
+<td>Tests LogIn with correct credentials.</td>
+</tr>
+<tr>
+<td><strong>Applicable for</strong></td>
+<td>Firefox</td>
+</tr>
+<tr>
+<td><strong>Initial Conditions</strong></td>
+<td>None</td>
+</tr>
+<tr>
+<td><strong>Test Step ID</strong></td>
+<td><strong>Test Step Description</strong></td>
+<td><strong>Expected Result</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Open the site&#39;s home page.</td>
+<td>The home page is loaded.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Click LogIn with email.</td>
+<td>Redirected so options of LogIn.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Click Sign in with email.</td>
+<td>Redirect to LogIn page.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Write Email in the Email input box.</td>
+<td>An Email is entered.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Write Password in the Password input box.</td>
+<td>An Password is entered.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Click create an account.</td>
+<td>Redirected to home page.</td>
+</tr>
+<tr>
+<td><strong>Test verdict</strong></td>
+<td>Passed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1-5-6-test-login-with-incorect-email">1.5.6 Test LogIn with incorect email</h3>
+<h4 id="special-instructions">Special Instructions</h4>
+<p><em>NONE</em></p>
+<table>
+<thead>
+<tr>
+<th><strong>Test Case ID</strong></th>
+<th>TestLoginWrongEmail</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Description</strong></td>
+<td>Tests LogIn with incorect email.</td>
+</tr>
+<tr>
+<td><strong>Applicable for</strong></td>
+<td>Firefox</td>
+</tr>
+<tr>
+<td><strong>Initial Conditions</strong></td>
+<td>None</td>
+</tr>
+<tr>
+<td><strong>Test Step ID</strong></td>
+<td><strong>Test Step Description</strong></td>
+<td><strong>Expected Result</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Open the site&#39;s home page.</td>
+<td>The home page is loaded.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Click LogIn with email.</td>
+<td>Redirected so options of LogIn.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Click Sign in with email.</td>
+<td>Redirect to LogIn page.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Write wrong Email in the Email input box.</td>
+<td>An Email is entered.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Write Password in the Password input box.</td>
+<td>An Password is entered.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Click create an account.</td>
+<td>An error div pops up.</td>
+</tr>
+<tr>
+<td><strong>Test verdict</strong></td>
+<td>Passed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1-5-7-test-login-with-incorect-password">1.5.7 Test LogIn with incorect password</h3>
+<h4 id="special-instructions">Special Instructions</h4>
+<p><em>NONE</em></p>
+<table>
+<thead>
+<tr>
+<th><strong>Test Case ID</strong></th>
+<th>TestLoginWrongPassword</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Description</strong></td>
+<td>Tests LogIn with incorect password.</td>
+</tr>
+<tr>
+<td><strong>Applicable for</strong></td>
+<td>Firefox</td>
+</tr>
+<tr>
+<td><strong>Initial Conditions</strong></td>
+<td>None</td>
+</tr>
+<tr>
+<td><strong>Test Step ID</strong></td>
+<td><strong>Test Step Description</strong></td>
+<td><strong>Expected Result</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Open the site&#39;s home page.</td>
+<td>The home page is loaded.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Click LogIn with email.</td>
+<td>Redirected so options of LogIn.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Click Sign in with email.</td>
+<td>Redirect to LogIn page.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Write valid Email in the Email input box.</td>
+<td>An Email is entered.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Write uncorect Password in the Password input box.</td>
+<td>An Password is entered.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Click create an account.</td>
+<td>An error div pops up.</td>
+</tr>
+<tr>
+<td><strong>Test verdict</strong></td>
+<td>Passed</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-test-book-show-page">2 Test book show page</h2>
+<h3 id="2-1-test-type">2.1 Test type</h3>
+<p>Functional Test: <em>Yes</em>  </p>
+<h3 id="2-2-system-under-test">2.2 System Under Test</h3>
+<p>System name: <a href="https://www.goodreads.com">https://www.goodreads.com</a>
+Version: 10.01.2024</p>
+<p>Short description of the system:
+The world&#39;s largest site for readers and book recommendations</p>
+<h3 id="2-3-test-personnel">2.3 Test Personnel</h3>
+<p>Name: Teodor Kostadinov Date: 10.01.2024  </p>
+<h2 id="2-4-test-summary">2.4 Test Summary</h2>
+<h3 id="results">Results</h3>
+<p>Total number of test cases: 6<br>Total number of test cases passed: 6<br>Total number of test cases failed: 0<br>Total number of bugs found: 0</p>
+<h2 id="2-5-test-cases">2.5 Test Cases</h2>
+<h3 id="2-5-1-test-most-popular-book">2.5.1 Test most popular book</h3>
+<h4 id="special-instructions">Special Instructions</h4>
+<p><em>NONE</em></p>
+<table>
+<thead>
+<tr>
+<th><strong>Test Case ID</strong></th>
+<th>TestPopularNewReleasesWorking</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Description</strong></td>
+<td>Test if there is a most popular book and it has a show.</td>
+</tr>
+<tr>
+<td><strong>Applicable for</strong></td>
+<td>Firefox</td>
+</tr>
+<tr>
+<td><strong>Initial Conditions</strong></td>
+<td>The user should be logged in.</td>
+</tr>
+<tr>
+<td><strong>Test Step ID</strong></td>
+<td><strong>Test Step Description</strong></td>
+<td><strong>Expected Result</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Open the site&#39;s home page.</td>
+<td>The home page is loaded.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Click New Releases.</td>
+<td>Redirected to New Releases page.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Save the most popular book&#39;s url.</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Click on the most popular book.</td>
+<td>Redirect to this book&#39;s page.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Comapre saved url to the currect url.</td>
+<td>They should be the same.</td>
+</tr>
+<tr>
+<td><strong>Test verdict</strong></td>
+<td>Passed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-5-2-test-rating-a-book-5-stars">2.5.2 Test rating a book 5 stars</h3>
+<h4 id="special-instructions">Special Instructions</h4>
+<p><em>NONE</em></p>
+<table>
+<thead>
+<tr>
+<th><strong>Test Case ID</strong></th>
+<th>TestRateBook5StarsWorking</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Description</strong></td>
+<td>Test giving a book a rating of 5 stars.</td>
+</tr>
+<tr>
+<td><strong>Applicable for</strong></td>
+<td>Firefox</td>
+</tr>
+<tr>
+<td><strong>Initial Conditions</strong></td>
+<td>The user should be logged in.</td>
+</tr>
+<tr>
+<td><strong>Test Step ID</strong></td>
+<td><strong>Test Step Description</strong></td>
+<td><strong>Expected Result</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Open the site&#39;s home page.</td>
+<td>The home page is loaded.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Click New Releases.</td>
+<td>Redirected to New Releases page.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Click on the most popular book.</td>
+<td>Redirect to this book&#39;s page.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Click on the fifth star.</td>
+<td>Tostr popup with text &quot;5 star rating saved&quot; and book is rated 5 stars.</td>
+</tr>
+<tr>
+<td><strong>Test verdict</strong></td>
+<td>Passed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-5-3-test-rating-a-book-1-stars">2.5.3 Test rating a book 1 stars</h3>
+<h4 id="special-instructions">Special Instructions</h4>
+<p><em>NONE</em></p>
+<table>
+<thead>
+<tr>
+<th><strong>Test Case ID</strong></th>
+<th>TestRateBook1StarsWorking</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Description</strong></td>
+<td>Test giving a book a rating of 1 stars.</td>
+</tr>
+<tr>
+<td><strong>Applicable for</strong></td>
+<td>Firefox</td>
+</tr>
+<tr>
+<td><strong>Initial Conditions</strong></td>
+<td>The user should be logged in.</td>
+</tr>
+<tr>
+<td><strong>Test Step ID</strong></td>
+<td><strong>Test Step Description</strong></td>
+<td><strong>Expected Result</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Open the site&#39;s home page.</td>
+<td>The home page is loaded.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Click New Releases.</td>
+<td>Redirected to New Releases page.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Click on the most popular book.</td>
+<td>Redirect to this book&#39;s page.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Click on the first star.</td>
+<td>Tostr popup with text &quot;1 star rating saved&quot; and book is rated 1 stars.</td>
+</tr>
+<tr>
+<td><strong>Test verdict</strong></td>
+<td>Passed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-5-4-test-remove-rating">2.5.4 Test remove rating</h3>
+<h4 id="special-instructions">Special Instructions</h4>
+<p><em>NONE</em></p>
+<table>
+<thead>
+<tr>
+<th><strong>Test Case ID</strong></th>
+<th>TestRateBookRemoveRatingWorking</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Description</strong></td>
+<td>Test remove rating from a book.</td>
+</tr>
+<tr>
+<td><strong>Applicable for</strong></td>
+<td>Firefox</td>
+</tr>
+<tr>
+<td><strong>Initial Conditions</strong></td>
+<td>The user should be logged in.</td>
+</tr>
+<tr>
+<td><strong>Test Step ID</strong></td>
+<td><strong>Test Step Description</strong></td>
+<td><strong>Expected Result</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Open the site&#39;s home page.</td>
+<td>The home page is loaded.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Click New Releases.</td>
+<td>Redirected to New Releases page.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Click on the most popular book.</td>
+<td>Redirect to this book&#39;s page.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Click on the remove rating.</td>
+<td>Tostr popup with text &quot;Rating removed&quot; and book&#39;s rating will be reset.</td>
+</tr>
+<tr>
+<td><strong>Test verdict</strong></td>
+<td>Passed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-5-5-test-adding-book-to-wanted-list">2.5.5 Test adding book to wanted list</h3>
+<h4 id="special-instructions">Special Instructions</h4>
+<p><em>NONE</em></p>
+<table>
+<thead>
+<tr>
+<th><strong>Test Case ID</strong></th>
+<th>TestWantToReadBookWorking</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Description</strong></td>
+<td>Test adding book to wanted list.</td>
+</tr>
+<tr>
+<td><strong>Applicable for</strong></td>
+<td>Firefox</td>
+</tr>
+<tr>
+<td><strong>Initial Conditions</strong></td>
+<td>The user should be logged in.</td>
+</tr>
+<tr>
+<td><strong>Test Step ID</strong></td>
+<td><strong>Test Step Description</strong></td>
+<td><strong>Expected Result</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Open the site&#39;s home page.</td>
+<td>The home page is loaded.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Click New Releases.</td>
+<td>Redirected to New Releases page.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Click on the most popular book.</td>
+<td>Redirect to this book&#39;s page.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Click on Wanting a book.</td>
+<td>A tostr &quot;Shelved as want to read&quot; pops up</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Go to home page.</td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Go to Want to Read</td>
+<td>Wanted book apears as the first option inside of it.</td>
+</tr>
+<tr>
+<td><strong>Test verdict</strong></td>
+<td>Passed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-5-6-test-removing-book-to-wanted-list">2.5.6 Test removing book to wanted list</h3>
+<h4 id="special-instructions">Special Instructions</h4>
+<p><em>NONE</em></p>
+<table>
+<thead>
+<tr>
+<th><strong>Test Case ID</strong></th>
+<th>TestRemoveBookFromWantedListWorking</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Description</strong></td>
+<td>Test removing book to wanted list.</td>
+</tr>
+<tr>
+<td><strong>Applicable for</strong></td>
+<td>Firefox</td>
+</tr>
+<tr>
+<td><strong>Initial Conditions</strong></td>
+<td>The user should be logged in.</td>
+</tr>
+<tr>
+<td><strong>Test Step ID</strong></td>
+<td><strong>Test Step Description</strong></td>
+<td><strong>Expected Result</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Open the site&#39;s home page.</td>
+<td>The home page is loaded.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Click New Releases.</td>
+<td>Redirected to New Releases page.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Click on the most popular book.</td>
+<td>Redirect to this book&#39;s page.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Click on Wanting a book.</td>
+<td>A model pops up.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Pick Remove from my shelf</td>
+<td>Book removed.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Confirm the removal.</td>
+<td>The modal closes.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Go to home page.</td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Go to Want to Read</td>
+<td>Removed book doesnt appear in any of the books.</td>
+</tr>
+<tr>
+<td><strong>Test verdict</strong></td>
+<td>Passed</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-test-news-and-interviews">3 Test News and Interviews</h2>
+<h3 id="3-1-test-type">3.1 Test type</h3>
+<p>Functional Test: <em>Yes</em>  </p>
+<h3 id="3-2-system-under-test">3.2 System Under Test</h3>
+<p>System name: <a href="https://www.goodreads.com">https://www.goodreads.com</a>
+Version: 10.01.2024</p>
+<p>Short description of the system:
+The world&#39;s largest site for readers and book recommendations</p>
+<h3 id="3-3-test-personnel">3.3 Test Personnel</h3>
+<p>Name: Daniel Manchevski Date: 10.01.2024  </p>
+<h2 id="3-4-test-summary">3.4 Test Summary</h2>
+<h3 id="results">Results</h3>
+<p>Total number of test cases: 7<br>Total number of test cases passed: 3<br>Total number of test cases failed: 4<br>Total number of bugs found: 4</p>
+<h2 id="3-5-test-cases">3.5 Test Cases</h2>
+<h3 id="3-5-1-test-news-and-interviews-opening-blog">3.5.1 Test News and Interviews opening blog</h3>
+<h4 id="special-instructions">Special Instructions</h4>
+<p><em>NONE</em></p>
+<table>
+<thead>
+<tr>
+<th><strong>Test Case ID</strong></th>
+<th>TestNewsAndInterviewsHasAFirstBlog</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Description</strong></td>
+<td>Tests News and Interview that is has a first blog</td>
+</tr>
+<tr>
+<td><strong>Applicable for</strong></td>
+<td>Firefox</td>
+</tr>
+<tr>
+<td><strong>Initial Conditions</strong></td>
+<td>The user should be logged in.</td>
+</tr>
+<tr>
+<td><strong>Test Step ID</strong></td>
+<td><strong>Test Step Description</strong></td>
+<td><strong>Expected Result</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Open the site&#39;s home page.</td>
+<td>The home page is loaded.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Go to News and Interviews</td>
+<td>The News and Interviews page is loaded.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Click on the first blog</td>
+<td>The blog show load.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Test blog url.</td>
+<td>The blog url should be the same as the first News and Interview page.</td>
+</tr>
+<tr>
+<td><strong>Test verdict</strong></td>
+<td>Passed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-5-2-test-posting-a-comment-under-a-blog">3.5.2 Test posting a comment under a blog</h3>
+<h4 id="special-instructions">Special Instructions</h4>
+<p><em>NONE</em></p>
+<table>
+<thead>
+<tr>
+<th><strong>Test Case ID</strong></th>
+<th>TestPostACommentNotWorking</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Description</strong></td>
+<td>Tests if you can post a comment under a blog.</td>
+</tr>
+<tr>
+<td><strong>Applicable for</strong></td>
+<td>Firefox</td>
+</tr>
+<tr>
+<td><strong>Initial Conditions</strong></td>
+<td>The user should be logged in.</td>
+</tr>
+<tr>
+<td><strong>Test Step ID</strong></td>
+<td><strong>Test Step Description</strong></td>
+<td><strong>Expected Result</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Open the site&#39;s home page.</td>
+<td>The home page is loaded.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Go to News and Interviews</td>
+<td>The News and Interviews page is loaded.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Click on the first blog</td>
+<td>The blog page is loaded.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Type a comment in the comment input field.</td>
+<td>A coomment is displayed.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Click on post button.</td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>No error should come up and the comments is posted.</td>
+<td>An error comes up.</td>
+</tr>
+<tr>
+<td><strong>Test verdict</strong></td>
+<td>Failed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-5-3-test-the-view-of-the-html-helper-button">3.5.3 Test the view of the html helper button</h3>
+<h4 id="special-instructions">Special Instructions</h4>
+<p><em>NONE</em></p>
+<table>
+<thead>
+<tr>
+<th><strong>Test Case ID</strong></th>
+<th>TestButtonHtmlIsOkScroll</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Description</strong></td>
+<td>Tests if the html helper button is displayed correctly.</td>
+</tr>
+<tr>
+<td><strong>Applicable for</strong></td>
+<td>Firefox</td>
+</tr>
+<tr>
+<td><strong>Initial Conditions</strong></td>
+<td>The user should be logged in.</td>
+</tr>
+<tr>
+<td><strong>Test Step ID</strong></td>
+<td><strong>Test Step Description</strong></td>
+<td><strong>Expected Result</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Open the site&#39;s home page.</td>
+<td>The home page is loaded.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Go to News and Interviews</td>
+<td>The News and Interviews page is loaded.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Click on the first blog</td>
+<td>The blog page is loaded.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Click on the (some html is okei) button.</td>
+<td>A modal pops up.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Scroll up to look at the bottom of the modal.</td>
+<td>The button disapears from the scree.</td>
+</tr>
+<tr>
+<td><strong>Test verdict</strong></td>
+<td>Failed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-5-3-test-the-view-of-the-add-book-author-button">3.5.3 Test the view of the add book/author button</h3>
+<h4 id="special-instructions">Special Instructions</h4>
+<p><em>NONE</em></p>
+<table>
+<thead>
+<tr>
+<th><strong>Test Case ID</strong></th>
+<th>TestButtonAddBookAutherScroll</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Description</strong></td>
+<td>Tests if the add book/author is displayed correctly.</td>
+</tr>
+<tr>
+<td><strong>Applicable for</strong></td>
+<td>Firefox</td>
+</tr>
+<tr>
+<td><strong>Initial Conditions</strong></td>
+<td>The user should be logged in.</td>
+</tr>
+<tr>
+<td><strong>Test Step ID</strong></td>
+<td><strong>Test Step Description</strong></td>
+<td><strong>Expected Result</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Open the site&#39;s home page.</td>
+<td>The home page is loaded.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Go to News and Interviews</td>
+<td>The News and Interviews page is loaded.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Click on the first blog</td>
+<td>The blog page is loaded.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Click on the (add book/author) button.</td>
+<td>A modal pops up.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Scroll up to look at the bottom of the modal.</td>
+<td>The button disapears from the scree.</td>
+</tr>
+<tr>
+<td><strong>Test verdict</strong></td>
+<td>Failed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-5-4-test-the-add-book-author-modal-text-field">3.5.4 Test the add book/author modal text field</h3>
+<h4 id="special-instructions">Special Instructions</h4>
+<p><em>NONE</em></p>
+<table>
+<thead>
+<tr>
+<th><strong>Test Case ID</strong></th>
+<th>TestButtonAddBookAutherBoxOverflow</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Description</strong></td>
+<td>Tests if the add book/author modal text field works fine.</td>
+</tr>
+<tr>
+<td><strong>Applicable for</strong></td>
+<td>Firefox</td>
+</tr>
+<tr>
+<td><strong>Initial Conditions</strong></td>
+<td>The user should be logged in.</td>
+</tr>
+<tr>
+<td><strong>Test Step ID</strong></td>
+<td><strong>Test Step Description</strong></td>
+<td><strong>Expected Result</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Open the site&#39;s home page.</td>
+<td>The home page is loaded.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Go to News and Interviews</td>
+<td>The News and Interviews page is loaded.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Click on the first blog</td>
+<td>The blog page is loaded.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Click on the (add book/author) button.</td>
+<td>A modal pops up.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Add the letter &#39;a&#39; 72 times.</td>
+<td>The input field flows of the modal.</td>
+</tr>
+<tr>
+<td><strong>Test verdict</strong></td>
+<td>Failed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-5-5-test-like-button-of-the-blog">3.5.5 Test like button of the blog</h3>
+<h4 id="special-instructions">Special Instructions</h4>
+<p><em>NONE</em></p>
+<table>
+<thead>
+<tr>
+<th><strong>Test Case ID</strong></th>
+<th>TestLikeWorking</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Description</strong></td>
+<td>Test like button of the blog.</td>
+</tr>
+<tr>
+<td><strong>Applicable for</strong></td>
+<td>Firefox</td>
+</tr>
+<tr>
+<td><strong>Initial Conditions</strong></td>
+<td>The user should be logged in.</td>
+</tr>
+<tr>
+<td><strong>Test Step ID</strong></td>
+<td><strong>Test Step Description</strong></td>
+<td><strong>Expected Result</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Open the site&#39;s home page.</td>
+<td>The home page is loaded.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Go to News and Interviews</td>
+<td>The News and Interviews page is loaded.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Click on the first blog</td>
+<td>The blog page is loaded.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Save the number of likes.</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Check if like button exist.</td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Like the post.</td>
+<td>The button turns to Unlike.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Comapre the old number of likes with the new number of likes</td>
+<td>They should have a one difference.</td>
+</tr>
+<tr>
+<td><strong>Test verdict</strong></td>
+<td>Passed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-5-6-test-unlike-button-of-the-blog">3.5.6 Test unlike button of the blog</h3>
+<h4 id="special-instructions">Special Instructions</h4>
+<p><em>NONE</em></p>
+<table>
+<thead>
+<tr>
+<th><strong>Test Case ID</strong></th>
+<th>TestLikeWorking</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Description</strong></td>
+<td>Test like button of the blog.</td>
+</tr>
+<tr>
+<td><strong>Applicable for</strong></td>
+<td>Firefox</td>
+</tr>
+<tr>
+<td><strong>Initial Conditions</strong></td>
+<td>The user should be logged in.</td>
+</tr>
+<tr>
+<td><strong>Test Step ID</strong></td>
+<td><strong>Test Step Description</strong></td>
+<td><strong>Expected Result</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Open the site&#39;s home page.</td>
+<td>The home page is loaded.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Go to News and Interviews</td>
+<td>The News and Interviews page is loaded.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Click on the first blog</td>
+<td>The blog page is loaded.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Save the number of likes.</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Check if unlike button exist.</td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Unlike the post.</td>
+<td>The button turns to Like.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Comapre the old number of likes with the new number of likes</td>
+<td>They should have a one difference.</td>
+</tr>
+<tr>
+<td><strong>Test verdict</strong></td>
+<td>Passed</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-test-the-search-box">4 Test the Search Box</h2>
+<h3 id="4-1-test-type">4.1 Test type</h3>
+<p>Functional Test: <em>Yes</em>  </p>
+<h3 id="4-2-system-under-test">4.2 System Under Test</h3>
+<p>System name: <a href="https://www.goodreads.com">https://www.goodreads.com</a>
+Version: 10.01.2024</p>
+<p>Short description of the system:
+The world&#39;s largest site for readers and book recommendations</p>
+<h3 id="4-3-test-personnel">4.3 Test Personnel</h3>
+<p>Name: Teodor Konstadinov Date: 10.01.2024  </p>
+<h2 id="4-4-test-summary">4.4 Test Summary</h2>
+<h3 id="results">Results</h3>
+<p>Total number of test cases: 5
+Total number of test cases passed: 5<br>Total number of test cases failed: 0<br>Total number of bugs found: 0</p>
+<h2 id="4-5-test-cases">4.5 Test Cases</h2>
+<h3 id="4-5-1-test-search-box-with-a-string">4.5.1 Test Search box with a string</h3>
+<h4 id="special-instructions">Special Instructions</h4>
+<p><em>NONE</em></p>
+<table>
+<thead>
+<tr>
+<th><strong>Test Case ID</strong></th>
+<th>TestSearchWithWordWorking</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Description</strong></td>
+<td>Test Search box with a string promt.</td>
+</tr>
+<tr>
+<td><strong>Applicable for</strong></td>
+<td>Firefox</td>
+</tr>
+<tr>
+<td><strong>Initial Conditions</strong></td>
+<td>The user should be logged in.</td>
+</tr>
+<tr>
+<td><strong>Test Step ID</strong></td>
+<td><strong>Test Step Description</strong></td>
+<td><strong>Expected Result</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Open the site&#39;s home page.</td>
+<td>The home page is loaded.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Add promt to the search box.</td>
+<td>A promt is added.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Press the search option.</td>
+<td>The page is redirected.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>View first five promts of the search results.</td>
+<td>Check if the they contain the string promt inside.</td>
+</tr>
+<tr>
+<td><strong>Test verdict</strong></td>
+<td>Passed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4-5-2-test-search-box-with-an-empty-string">4.5.2 Test Search box with an empty string</h3>
+<h4 id="special-instructions">Special Instructions</h4>
+<p><em>NONE</em></p>
+<table>
+<thead>
+<tr>
+<th><strong>Test Case ID</strong></th>
+<th>TestSearchWithEmptyStringWorking</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Description</strong></td>
+<td>Test Search box with a empty promt.</td>
+</tr>
+<tr>
+<td><strong>Applicable for</strong></td>
+<td>Firefox</td>
+</tr>
+<tr>
+<td><strong>Initial Conditions</strong></td>
+<td>The user should be logged in.</td>
+</tr>
+<tr>
+<td><strong>Test Step ID</strong></td>
+<td><strong>Test Step Description</strong></td>
+<td><strong>Expected Result</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Open the site&#39;s home page.</td>
+<td>The home page is loaded.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Add promt to the search box.</td>
+<td>A promt is added.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Press the search option.</td>
+<td>The page is redirected.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>View the search results.</td>
+<td>No results show be showm.</td>
+</tr>
+<tr>
+<td><strong>Test verdict</strong></td>
+<td>Passed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4-5-3-test-search-box-with-an-cyrillic-promt">4.5.3 Test Search box with an cyrillic promt</h3>
+<h4 id="special-instructions">Special Instructions</h4>
+<p><em>NONE</em></p>
+<table>
+<thead>
+<tr>
+<th><strong>Test Case ID</strong></th>
+<th>TestSearchWithCyrillicTextWorking</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Description</strong></td>
+<td>Test Search box with a cyrillic promt.</td>
+</tr>
+<tr>
+<td><strong>Applicable for</strong></td>
+<td>Firefox</td>
+</tr>
+<tr>
+<td><strong>Initial Conditions</strong></td>
+<td>The user should be logged in.</td>
+</tr>
+<tr>
+<td><strong>Test Step ID</strong></td>
+<td><strong>Test Step Description</strong></td>
+<td><strong>Expected Result</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Open the site&#39;s home page.</td>
+<td>The home page is loaded.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Add promt to the search box.</td>
+<td>A promt is added.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Press the search option.</td>
+<td>The page is redirected.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>View first five promts of the search results.</td>
+<td>Check if the they contain the cyrillic promt inside.</td>
+</tr>
+<tr>
+<td><strong>Test verdict</strong></td>
+<td>Passed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4-5-4-test-search-box-by-author">4.5.4 Test Search box by author</h3>
+<h4 id="special-instructions">Special Instructions</h4>
+<p><em>NONE</em></p>
+<table>
+<thead>
+<tr>
+<th><strong>Test Case ID</strong></th>
+<th>TestSearchByAutherWorking</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Description</strong></td>
+<td>Test Search box by author.</td>
+</tr>
+<tr>
+<td><strong>Applicable for</strong></td>
+<td>Firefox</td>
+</tr>
+<tr>
+<td><strong>Initial Conditions</strong></td>
+<td>The user should be logged in.</td>
+</tr>
+<tr>
+<td><strong>Test Step ID</strong></td>
+<td><strong>Test Step Description</strong></td>
+<td><strong>Expected Result</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Open the site&#39;s home page.</td>
+<td>The home page is loaded.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Add promt to the search box.</td>
+<td>A promt is added.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Press the search option.</td>
+<td>The page is redirected.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>View the search results.</td>
+<td>No results show be showm.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Click on the Author checkbox.</td>
+<td>The author checkbox is selected.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Search by author.</td>
+<td>The page is redirected.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Get the first search results author.</td>
+<td>Same author as the promt author.</td>
+</tr>
+<tr>
+<td><strong>Test verdict</strong></td>
+<td>Passed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4-5-4-test-search-box-by-author-by-empty-author">4.5.4 Test Search box by author by empty author</h3>
+<h4 id="special-instructions">Special Instructions</h4>
+<p><em>NONE</em></p>
+<table>
+<thead>
+<tr>
+<th><strong>Test Case ID</strong></th>
+<th>TestSearchBySingleWhiteSpaceAutherWorking</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Description</strong></td>
+<td>Test Search box by empty author.</td>
+</tr>
+<tr>
+<td><strong>Applicable for</strong></td>
+<td>Firefox</td>
+</tr>
+<tr>
+<td><strong>Initial Conditions</strong></td>
+<td>The user should be logged in.</td>
+</tr>
+<tr>
+<td><strong>Test Step ID</strong></td>
+<td><strong>Test Step Description</strong></td>
+<td><strong>Expected Result</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Open the site&#39;s home page.</td>
+<td>The home page is loaded.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Add promt to the search box.</td>
+<td>A promt is added.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Press the search option.</td>
+<td>The page is redirected.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>View the search results.</td>
+<td>No results show be showm.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Click on the Author checkbox.</td>
+<td>The author checkbox is selected.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Search by empty author.</td>
+<td>The page is redirected.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Get the results.</td>
+<td>No results presant.</td>
+</tr>
+<tr>
+<td><strong>Test verdict</strong></td>
+<td>Passed</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-test-the-navigation">5 Test the Navigation</h2>
+<h3 id="5-1-test-type">5.1 Test type</h3>
+<p>Functional Test: <em>Yes</em>  </p>
+<h3 id="5-2-system-under-test">5.2 System Under Test</h3>
+<p>System name: <a href="https://www.goodreads.com">https://www.goodreads.com</a>
+Version: 10.01.2024</p>
+<p>Short description of the system:
+The world&#39;s largest site for readers and book recommendations</p>
+<h3 id="5-3-test-personnel">5.3 Test Personnel</h3>
+<p>Name: Daniel Manchevski Date: 10.01.2024  </p>
+<h2 id="5-4-test-summary">5.4 Test Summary</h2>
+<h3 id="results">Results</h3>
+<p>Total number of test cases: 1
+Total number of test cases passed: 1<br>Total number of test cases failed: 0<br>Total number of bugs found: 0</p>
+<h2 id="5-5-test-cases">5.5 Test Cases</h2>
+<h3 id="5-5-1-test-the-home-page-navigation">5.5.1 Test the home page navigation</h3>
+<h4 id="special-instructions">Special Instructions</h4>
+<p><em>NONE</em></p>
+<table>
+<thead>
+<tr>
+<th><strong>Test Case ID</strong></th>
+<th>TestNavigationOnTheHomePageWorking</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Description</strong></td>
+<td>Test the home page navigation.</td>
+</tr>
+<tr>
+<td><strong>Applicable for</strong></td>
+<td>Firefox</td>
+</tr>
+<tr>
+<td><strong>Initial Conditions</strong></td>
+<td>The user should be logged in.</td>
+</tr>
+<tr>
+<td><strong>Test Step ID</strong></td>
+<td><strong>Test Step Description</strong></td>
+<td><strong>Expected Result</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Open the site&#39;s home page.</td>
+<td>The home page is loaded.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Click on Home button in the nav bar.</td>
+<td>Redirected to <a href="https://www.goodreads.com/?ref=nav_home">https://www.goodreads.com/?ref=nav_home</a>.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Click on My Books button in the nav bar.</td>
+<td>Redirected to <a href="https://www.goodreads.com/review/list/174233575?ref=nav_mybooks">https://www.goodreads.com/review/list/174233575?ref=nav_mybooks</a>.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Click on My Messages button in the nav bar.</td>
+<td>Redirected to <a href="https://www.goodreads.com/message/inbox?ref=nav_my_messages">https://www.goodreads.com/message/inbox?ref=nav_my_messages</a>.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Click on My Friends button in the nav bar.</td>
+<td>Redirected to <a href="https://www.goodreads.com/friend?ref=nav_my_friends">https://www.goodreads.com/friend?ref=nav_my_friends</a>.</td>
+</tr>
+<tr>
+<td><strong>Test verdict</strong></td>
+<td>Passed</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-test-ask-the-author">6 Test Ask the Author</h2>
+<h3 id="6-1-test-type">6.1 Test type</h3>
+<p>Functional Test: <em>Yes</em>  </p>
+<h3 id="6-2-system-under-test">6.2 System Under Test</h3>
+<p>System name: <a href="https://www.goodreads.com">https://www.goodreads.com</a>
+Version: 10.01.2024</p>
+<p>Short description of the system:
+The world&#39;s largest site for readers and book recommendations</p>
+<h3 id="6-3-test-personnel">6.3 Test Personnel</h3>
+<p>Name: Teodor Kostadinov Date: 10.01.2024  </p>
+<h2 id="6-4-test-summary">6.4 Test Summary</h2>
+<h3 id="results">Results</h3>
+<p>Total number of test cases: 4
+Total number of test cases passed: 3<br>Total number of test cases failed: 1 
+Total number of bugs found: 1</p>
+<h2 id="6-5-test-cases">6.5 Test Cases</h2>
+<h3 id="6-5-1-test-ask-the-author-existing">6.5.1 Test Ask the Author existing</h3>
+<h4 id="special-instructions">Special Instructions</h4>
+<p><em>NONE</em></p>
+<table>
+<thead>
+<tr>
+<th><strong>Test Case ID</strong></th>
+<th>TestIfThereIsAFeaturedAuthorWokring</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Description</strong></td>
+<td>Tests Asks the Author tab if there is a featured author you could ask</td>
+</tr>
+<tr>
+<td><strong>Applicable for</strong></td>
+<td>Firefox</td>
+</tr>
+<tr>
+<td><strong>Initial Conditions</strong></td>
+<td>The user should be logged in.</td>
+</tr>
+<tr>
+<td><strong>Test Step ID</strong></td>
+<td><strong>Test Step Description</strong></td>
+<td><strong>Expected Result</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Open the site&#39;s home page.</td>
+<td>The home page is loaded.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Go to Ask the Author.</td>
+<td>Redirect to Ask the Author.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Select the first author.</td>
+<td>Redirect to the author&#39;s page.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Check if the author page works</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Test verdict</strong></td>
+<td>Passed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="6-5-2-test-if-you-could-ask-the-author-a-question">6.5.2 Test if you could ask the author a question</h3>
+<h4 id="special-instructions">Special Instructions</h4>
+<p><em>NONE</em></p>
+<table>
+<thead>
+<tr>
+<th><strong>Test Case ID</strong></th>
+<th>TestAskAuthorWorking</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Description</strong></td>
+<td>Tests Asks the Author tab after pressing ask you could write to him.</td>
+</tr>
+<tr>
+<td><strong>Applicable for</strong></td>
+<td>Firefox</td>
+</tr>
+<tr>
+<td><strong>Initial Conditions</strong></td>
+<td>The user should be logged in.</td>
+</tr>
+<tr>
+<td><strong>Test Step ID</strong></td>
+<td><strong>Test Step Description</strong></td>
+<td><strong>Expected Result</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Open the site&#39;s home page.</td>
+<td>The home page is loaded.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Go to Ask the Author.</td>
+<td>Redirect to Ask the Author.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Press the first author ask page.</td>
+<td>Redirect to the author&#39;s ask page.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Write a promt to ask.</td>
+<td>The promt is displayed.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Click the post button.</td>
+<td>The author should be asked the promt.</td>
+</tr>
+<tr>
+<td><strong>Test verdict</strong></td>
+<td>Passed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="6-5-3-test-if-you-could-ask-the-author-a-question-fromt-his-page">6.5.3 Test if you could ask the author a question fromt his page</h3>
+<h4 id="special-instructions">Special Instructions</h4>
+<p><em>NONE</em></p>
+<table>
+<thead>
+<tr>
+<th><strong>Test Case ID</strong></th>
+<th>TestAskAuthorWorking</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Description</strong></td>
+<td>Tests Asks the Author tab after pressing the author&#39;s profile you could write to him.</td>
+</tr>
+<tr>
+<td><strong>Applicable for</strong></td>
+<td>Firefox</td>
+</tr>
+<tr>
+<td><strong>Initial Conditions</strong></td>
+<td>The user should be logged in.</td>
+</tr>
+<tr>
+<td><strong>Test Step ID</strong></td>
+<td><strong>Test Step Description</strong></td>
+<td><strong>Expected Result</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Open the site&#39;s home page.</td>
+<td>The home page is loaded.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Go to Ask the Author.</td>
+<td>Redirect to Ask the Author.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Select the first author page.</td>
+<td>Redirect to the author&#39;s page.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Write a promt to ask.</td>
+<td>The promt is displayed.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Click the post button.</td>
+<td>The author should be asked the promt.</td>
+</tr>
+<tr>
+<td><strong>Test verdict</strong></td>
+<td>Passed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="6-5-4-test-author-s-video-playing">6.5.4 Test author&#39;s video playing</h3>
+<h4 id="special-instructions">Special Instructions</h4>
+<p><em>NONE</em></p>
+<table>
+<thead>
+<tr>
+<th><strong>Test Case ID</strong></th>
+<th>TestIfAuthorVideoPlays</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Description</strong></td>
+<td>Tests if author&#39;s video is playing.</td>
+</tr>
+<tr>
+<td><strong>Applicable for</strong></td>
+<td>Firefox</td>
+</tr>
+<tr>
+<td><strong>Initial Conditions</strong></td>
+<td>The user should be logged in.</td>
+</tr>
+<tr>
+<td><strong>Test Step ID</strong></td>
+<td><strong>Test Step Description</strong></td>
+<td><strong>Expected Result</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Open the site&#39;s home page.</td>
+<td>The home page is loaded.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Go to Ask the Author.</td>
+<td>Redirect to Ask the Author.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Select the first author page.</td>
+<td>Redirect to the author&#39;s page.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Select the first video.</td>
+<td>Redirect should happen.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Video is playing.</td>
+<td>An error div occurs.</td>
+</tr>
+<tr>
+<td><strong>Test verdict</strong></td>
+<td>Failed</td>
+</tr>
+</tbody>
+</table>
+
