@@ -21,9 +21,9 @@ NUnit provides a diverse set of assertion methods through the Assert class, offe
 NUnit's extensibility is a hallmark of its success. The framework embraces the concept of custom extensions and attributes, enabling developers to tailor their testing experience to specific project requirements. Integration with popular development environments, continuous integration tools, and build systems is seamless, further solidifying NUnit's status as an integral part of the .NET testing ecosyste
 
 ### Project set up
-For project execution you need at least .NET 6. You need to create a Privates.cs file with the following consts: 
-    public const string LoginEmail = "";
-    public const string LoginPassword = "";
+For project execution you need at least .NET 6. You need to create a Privates.cs file with the following consts:__ 
+    public const string LoginEmail = "";__
+    public const string LoginPassword = "";__
 This is need so that you could do the test which requires an account that is loged in.
 
 ## 1 Test sign in
